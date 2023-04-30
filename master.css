@@ -1,0 +1,536 @@
+body {
+  margin-top: 80px;
+  }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 98%;
+  height: 50px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand img {
+  height: 30px;
+  margin-right: auto;
+}
+
+
+.navbar-nav {
+display: flex;
+list-style: none;
+align-items: center;
+margin-bottom: 10px;
+padding: 0;
+
+}
+
+.nav-link {
+padding: 10px;
+font-size: 18px;
+font-weight: 500;
+color: #333;
+text-decoration: none;
+}
+
+.nav-link:hover {
+color: #007bff;
+}
+
+.navbar-icons {
+display: flex;
+align-items: center;
+}
+
+.navbar-icons svg {
+width: 24px;
+height: 24px;
+margin-left: 10px;
+fill: #333;
+}
+
+.nav-item {
+  padding: 10px;
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 767px) {
+  /* Hide the navbar icons */
+  .navbar-icons {
+    display: none;
+  }
+
+  /* Adjust the layout for the collapsed menu */
+  .navbar-collapse {
+    position: fixed;
+    top: 56px; /* adjust this value to your preference */
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: white; /* change this value to your preference */
+    padding: 15px;
+    overflow-y: scroll;
+    z-index: 999;
+  }
+
+  /* Style the collapsed menu links */
+  .navbar-nav {
+    display: block;
+    margin-bottom: 10px;
+    padding-left: 0;
+  }
+
+  .nav-item {
+    margin-bottom: 5px;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 10px 15px;
+    color: black; /* change this value to your preference */
+    background-color: transparent;
+    border-radius: 0;
+    transition: all 0.3s;
+  }
+
+  .nav-link:hover {
+    color: white; /* change this value to your preference */
+    background-color: black; /* change this value to your preference */
+  }
+}
+
+
+/* Button styles */
+.menu-toggle {
+  display: none; /* Hide the button by default */
+  background-color: transparent;
+  border: none;
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+/* Show the button when the navbar is collapsed */
+@media (max-width: 767px) {
+  .navbar-collapse {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* Position the button */
+.menu-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  z-index: 999;
+}
+
+/* Style the button on hover */
+.menu-toggle:hover {
+  color: purple;
+}
+
+
+
+/* Style the button icon */
+.menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin-bottom: 5px;
+  background-color: black;
+  border-radius: 3px;
+  transition: all 0.3s;
+}
+
+.menu-toggle span:first-child {
+  transform-origin: top left;
+}
+
+.menu-toggle span:last-child {
+  transform-origin: bottom left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+  background-color: beige;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  padding-top: 80px;
+}
+
+.tagline {
+  text-align: center;
+}
+
+.items-container {
+  display: flex;
+  margin-top: 20px;
+  width: 100%;
+  justify-content: center;
+}
+
+.item {
+  background-color: purple;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin: 10px;
+  overflow: hidden;
+  padding: 0;
+  width: 300px;
+  height: 450px;
+}
+.image-container {
+  height: 65%;
+}
+
+.item .image-container {
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.item .image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.item .description {
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container1 {
+  text-align: center;
+}
+
+.items-container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.item1 {
+  margin: 20px;
+  flex: 1 1 300px;
+  max-width: 300px;
+}
+
+.image-container1 img {
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  max-width: 150px;
+}
+
+.description {
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.newsletter-container {
+  background-color: #F2F2F2;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+  text-align: left;
+  max-width: 900px;
+  margin: auto;
+}
+
+.subscribe-title h2 {
+  font-size: 24px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.form-group label {
+  display: none;
+}
+
+.form-control {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  background-color: #FFFFFF;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-submit {
+  border-radius: 5px;
+  border: none;
+  background-color: #FFA500;
+  color: #FFFFFF;
+  font-size: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-submit:hover {
+  background-color: #FF8C00;
+}
+
+
+.btn4 {
+  border-radius: 5px;
+  border: none;
+  background-color: #FFA500;
+  color: #FFFFFF;
+  font-size: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn4:hover {
+  background-color: #FF8C00;
+}
+
+@media only screen and (max-width: 600px) {
+  .subscribe-title h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    flex-direction: column;
+  }
+
+  .form-control {
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .btn-submit {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer styles */
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #f9f9f9;
+  padding: 2rem 0 ;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+
+.footer-column {
+  width: 20%;
+  margin: 0 1rem;
+  padding: 1rem 0;
+}
+
+.footer-column h4 {
+  margin-bottom: 1rem;
+  font-size: 18px;
+  color: #222;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-column li a {
+  text-decoration: none;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.footer-column li a:hover {
+  color: #222;
+}
+
+.social-icons {
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  margin-right: 0.5rem;
+  color: #555;
+}
+
+.social-icons a:hover {
+  color: #222;
+}
+
+/* Logo styles */
+
+footer img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive styles */
+
+@media screen and (max-width: 768px) {
+  .footer-column {
+    width: 50%;
+  }
+
+  footer {
+    padding: 2rem 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer-column {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.banner {
+  background-image: url('https://picsum.photos/500/500');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 550px;
+  }
