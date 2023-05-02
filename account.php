@@ -1,6 +1,5 @@
 <?php
  require_once 'header.php';
- include("db_connect.php");
 ?>
 <main class="account">
 
@@ -11,22 +10,22 @@
 
   <div id="Login" class="tabcontent">
     <h2>Login</h2>
-    <form>
+    <form method="post" action="login.php">
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" required>
       <br>
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" required>
       <br>
-      <input type="submit" value="Submit">
+      <input type="submit" value="Submit" name="submit">
     </form>
   </div>
 
   <div id="Signup" class="tabcontent">
     <h2>Signup</h2>
-    <form>
+    <form method="post" action="signup.php">
       <label for="fullname">Full Name:</label>
-      <input type="text" id="fullname" name="fullname" required>
+      <input type="text" id="name" name="name" required>
       <br>
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" required>
@@ -37,7 +36,7 @@
       <label for="confirm_password">Confirm Password:</label>
       <input type="password" id="confirm_password" name="confirm_password" required>
       <br>
-      <input type="submit" value="Submit">
+      <input type="submit" value="Submit" name="submit">
     </form>
   </div>
 
