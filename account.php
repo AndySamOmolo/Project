@@ -1,82 +1,8 @@
 <?php
  require_once 'header.php';
+ include("db_connect.php");
 ?>
-
-  <style media="screen">
-  /* Style the tab */
-.tabs {
-overflow: hidden;
-border-bottom: 1px solid #ccc;
-margin-bottom: 20px;
-}
-
-/* Style the buttons that are used to open the tab content */
-.tablinks {
-background-color: #f2f2f2;
-border: none;
-outline: none;
-cursor: pointer;
-padding: 10px 20px;
-font-size: 18px;
-width: 50%;
-float: left;
-}
-
-/* Change background color of buttons on hover */
-.tablinks:hover {
-background-color: #ddd;
-}
-
-/* Create an active/current tablink class */
-.tablinks.active {
-background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-display: none;
-padding: 20px;
-clear: both;
-}
-
-/* Style the forms */
-form {
-max-width: 500px;
-margin: 0 auto;
-display: flex;
-flex-direction: column;
-}
-
-label {
-font-weight: bold;
-margin-bottom: 10px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-padding: 10px;
-margin-bottom: 20px;
-border: none;
-border-radius: 4px;
-}
-
-input[type="submit"] {
-background-color: #4CAF50;
-color: white;
-border: none;
-padding: 10px 20px;
-border-radius: 4px;
-cursor: pointer;
-margin-top: 10px;
-}
-
-input[type="submit"]:hover {
-background-color: #45a049;
-}
-
-  </style>
-
+<main class="account">
 
   <div class="tabs">
     <button class="tablinks" onclick="openTab(event, 'Login')" id="defaultOpen">Login</button>
@@ -114,6 +40,8 @@ background-color: #45a049;
       <input type="submit" value="Submit">
     </form>
   </div>
+
+</main>
 
   <script>
     function openTab(evt, tabName) {

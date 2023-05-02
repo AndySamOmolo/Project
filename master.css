@@ -1,17 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
 body {
   margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   }
+
+h1 {
+  font-size: 2.3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  line-height: 1.5;
+}
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
-  padding: 10px 20px;
+  padding: 30px 20px 20px 20px;
   position: fixed;
   top: 0;
   left: 0;
-  width: 98%;
+  width: 100%;
   height: 50px;
 }
 
@@ -182,12 +206,13 @@ fill: #333;
 
 
 .container {
+  width: 100%;
   background-color: beige;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 20px;
-  padding-top: 80px;
+
 }
 
 .tagline {
@@ -199,17 +224,21 @@ fill: #333;
   margin-top: 20px;
   width: 100%;
   justify-content: center;
+  overflow: hidden;
 }
 
 .item {
-  background-color: purple;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   box-sizing: border-box;
   margin: 10px;
-  overflow: hidden;
   padding: 0;
   width: 300px;
   height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .image-container {
   height: 65%;
@@ -224,6 +253,7 @@ fill: #333;
   width: 100%;
   height: 100%;
   object-fit: contain;
+  border-radius: 4px;
 }
 
 .item .description {
@@ -252,6 +282,7 @@ fill: #333;
 
 
 .container1 {
+  margin-top: 20px;
   text-align: center;
 }
 
@@ -266,8 +297,15 @@ fill: #333;
 
 .item1 {
   margin: 20px;
-  flex: 1 1 300px;
   max-width: 300px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 20px 0 0 0;
+  width: 300px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .image-container1 img {
@@ -279,6 +317,11 @@ fill: #333;
 
 .description {
   text-align: center;
+}
+
+.description1 {
+  text-align: center;
+  margin-top: 20px;
 }
 
 
@@ -315,16 +358,14 @@ fill: #333;
   background-color: #F2F2F2;
   padding: 20px;
   border-radius: 10px;
-  margin: 20px;
+  margin: 30px 0 0;
   text-align: left;
+  width: 100%;
   max-width: 900px;
-  margin: auto;
-}
-
-.subscribe-title h2 {
-  font-size: 24px;
-  text-align: left;
-  margin-bottom: 10px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .form-group {
@@ -349,6 +390,7 @@ fill: #333;
 }
 
 .newsletter-form {
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -378,11 +420,13 @@ fill: #333;
   padding: 10px 20px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
+  margin-top: 20px;
 }
 
 .btn4:hover {
   background-color: #FF8C00;
 }
+
 
 @media only screen and (max-width: 600px) {
   .subscribe-title h2 {
@@ -438,6 +482,7 @@ footer {
   font-family: Arial, sans-serif;
   font-size: 14px;
   color: #333;
+  margin-top: 30px;
 }
 
 .footer-column {
@@ -532,5 +577,274 @@ footer img {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  height: 550px;
+  height: 500px;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.items-container2 {
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+    overflow: hidden;
+    margin-left: 50px;
+  }
+
+.products-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+  aside {
+			position: fixed;
+			top: 70px;
+			left: 0;
+			height: fit-content;
+			width: 200px;
+			padding: 20px;
+      border-radius: 5px;
+		}
+
+	aside	nav ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+	aside	nav li {
+			margin-bottom: 10px;
+		}
+
+	aside	nav a {
+			display: block;
+			padding: 10px;
+			background-color: #ccc;
+			color: #333;
+			text-decoration: none;
+			font-weight: bold;
+			border-radius: 5px;
+		}
+
+	aside	nav a:hover {
+			background-color: #666;
+			color: #fff;
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .aboutimg {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+      border-radius: 50%;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+
+  .about-header {
+    margin-top: 30px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .about {
+    width: 80%;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contact-form {
+border-radius: 5px;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+padding: 20px;
+width: 80%;
+max-width: 900px;
+margin: 0 auto;
+text-align: center;
+}
+
+.contact-form h2 {
+font-size: 2rem;
+margin-bottom: 1rem;
+}
+
+.contact-form form {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.contact-form label {
+display: block;
+font-size: 1.2rem;
+margin-bottom: 0.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+width: 100%;
+padding: 0.5rem;
+margin-bottom: 1rem;
+border-radius: 0.5rem;
+border: 1px solid #ccc;
+}
+
+.contact-form textarea {
+  height: 100px;
+}
+
+.contact-form button[type="submit"] {
+background-color: #007bff;
+color: #fff;
+border: none;
+border-radius: 0.5rem;
+padding: 0.5rem 1rem;
+font-size: 1.2rem;
+cursor: pointer;
+}
+
+.contact-form button[type="submit"]:hover {
+background-color: #0062cc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tabs {
+overflow: hidden;
+border-bottom: 1px solid #ccc;
+margin-bottom: 20px;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tablinks {
+background-color: #f2f2f2;
+border: none;
+outline: none;
+cursor: pointer;
+padding: 10px 20px;
+font-size: 18px;
+width: 50%;
+float: left;
+}
+
+/* Change background color of buttons on hover */
+.tablinks:hover {
+background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tablinks.active {
+background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+display: none;
+padding: 20px;
+clear: both;
+}
+
+/* Style the forms */
+.tabcontent form {
+width: 80%;
+max-width: 500px;
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+}
+
+.tabcontent label {
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+.tabcontent input[type="text"],
+.tabcontent input[type="email"],
+.tabcontent input[type="password"] {
+padding: 10px;
+margin-bottom: 20px;
+border: 1px grey solid;
+border-radius: 4px;
+}
+
+.tabcontent input[type="submit"] {
+background-color: #4CAF50;
+color: white;
+border: none;
+padding: 10px 20px;
+border-radius: 4px;
+cursor: pointer;
+margin-top: 10px;
+}
+
+.tabcontent input[type="submit"]:hover {
+background-color: #45a049;
+}
+
+.account {
+  width: 80%;
+}

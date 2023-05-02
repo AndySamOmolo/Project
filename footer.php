@@ -14,10 +14,21 @@
   <div class="footer-column">
     <h4>Pages</h4>
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">Menu</a></li>
-      <li><a href="#">Contact Us</a></li>
+      <li>
+        <a href="index.php">Home</a>
+      </li>
+      <li>
+        <a href="products.php">Shop</a>
+      </li>
+      <li>
+        <a href="about.php">About Us</a>
+      </li>
+      <li>
+        <a href="contact.php">Contact Us</a>
+      </li>
+      <li>
+        <a href="account.php">Account</a>
+      </li>
     </ul>
   </div>
   <div class="footer-column">
