@@ -4,11 +4,11 @@
 
 <div class="product-container">
 <div class="product-image">
-  <img src="cake-image.jpg" alt="Cake Name">
+  <img src="https://picsum.photos/500/500" alt="Cake Name">
 </div>
 <div class="product-details">
   <h2>Cake Name</h2>
-  <p class="description">This delicious cake is perfect for any occasion. Made with high-quality ingredients and baked fresh to order, it's sure to impress your guests.</p>
+  <p class="description2">This delicious cake is perfect for any occasion. Made with high-quality ingredients and baked fresh to order, it's sure to impress your guests.</p>
   <ul class="product-info">
     <li><strong>Price:</strong> $24.99</li>
     <li><strong>Size:</strong> 9-inch</li>
@@ -30,15 +30,18 @@
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
-  background-color: #f5f5f5;
+  background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+  width: 80%;
+  text-align: left;
 }
 
 .product-image img {
   width: 100%;
   max-width: 600px;
   margin-bottom: 2rem;
+  object-fit: contain;
 }
 
 .product-details {
@@ -85,6 +88,11 @@ input[type="number"] {
   font-size: 1.2rem;
   text-align: center;
   margin-right: 1rem;
+}
+
+.description2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 .add-to-cart-btn {

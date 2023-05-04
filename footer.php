@@ -3,7 +3,7 @@
     <img src="logo.png" alt="Bakery Logo">
   </div>
   <div class="footer-column">
-    <h4>Categories</h4>
+    <h3>Categories</h3>
     <ul>
       <li><a href="#">Bread</a></li>
       <li><a href="#">Cakes</a></li>
@@ -12,7 +12,7 @@
     </ul>
   </div>
   <div class="footer-column">
-    <h4>Pages</h4>
+    <h3>Pages</h3>
     <ul>
       <li>
         <a href="index.php">Home</a>
@@ -32,7 +32,7 @@
     </ul>
   </div>
   <div class="footer-column">
-    <h4>Contact Us</h4>
+    <h3>Contact Us</h3>
     <p>123 Main Street<br>
     Anytown, USA 12345<br>
     Phone: (123) 456-7890<br>

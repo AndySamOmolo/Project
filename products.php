@@ -24,7 +24,7 @@
         <p>Description for Image 1</p>
       </div>
       <div class="btnopt">
-        <button class="btn4" type="button" name="button">Select Options</button>
+        <button class="btn1" type="button" name="button">Select Options</button>
       </div>
     </div>
     <div class="item">
@@ -35,7 +35,7 @@
         <p>Description for Image 2</p>
       </div>
       <div class="btnopt">
-        <button class="btn4" type="button" name="button">Select Options</button>
+        <button class="btn1" type="button" name="button">Select Options</button>
       </div>
     </div>
     <div class="item">
@@ -46,7 +46,7 @@
         <p>Description for Image 3</p>
       </div>
       <div class="btnopt">
-        <button class="btn4" type="button" name="button">Select Options</button>
+        <button class="btn1" type="button" name="button">Select Options</button>
       </div>
     </div>
   </div>

@@ -17,7 +17,7 @@
     <label for="message">Message:</label>
     <textarea id="message" name="message" required></textarea>
 
-    <button type="submit">Send Message</button>
+    <button class="btn2" type="submit">Send Message</button>
   </form>
 </div>
 

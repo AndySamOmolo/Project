@@ -6,7 +6,7 @@
 
 
  <div class="container">
-  <h2 class="tagline">Bestsellers in Bakery</h2>
+  <h1 class="tagline">Bestsellers in Our Bakery</h1>
   <div class="items-container">
     <div class="item">
       <div class="image-container">
@@ -16,7 +16,7 @@
         <p>Description for Image 1</p>
       </div>
       <div class="btnopt">
-        <button class="btn4" type="button" name="button">Select Options</button>
+        <button class="btn1" type="button" name="button">Select Options</button>
       </div>
     </div>
     <div class="item">
@@ -27,7 +27,7 @@
         <p>Description for Image 2</p>
       </div>
       <div class="btnopt">
-        <button class="btn4" type="button" name="button">Select Options</button>
+        <button class="btn1" type="button" name="button">Select Options</button>
       </div>
     </div>
     <div class="item">
@@ -38,7 +38,7 @@
         <p>Description for Image 3</p>
       </div>
       <div class="btnopt">
-        <button class="btn4" type="button" name="button">Select Options</button>
+        <button class="btn1" type="button" name="button">Select Options</button>
       </div>
     </div>
   </div>
@@ -48,7 +48,7 @@
 
 
 <div class="container1">
- <h2 class="tagline">Hear what our satisfied customers have to say!</h2>
+ <h1 class="tagline">Hear what our satisfied customers have to say!</h1>
  <div class="items-container1">
    <div class="item1">
      <div class="image-container1">
@@ -82,12 +82,12 @@
 <div class="newsletter-container">
   <form action="#" method="post" class="newsletter-form">
     <div class="subscribe-title">
-      <h1>Subscribe to Our Newsletter</h1>
+      <h4>Subscribe to Our Newsletter</h4>
     </div>
     <div class="form-group">
       <label for="email" class="sr-only">Email address</label>
       <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-      <button type="submit" class="btn-submit">Subscribe</button>
+      <button type="submit" class="btn2">Subscribe</button>
     </div>
   </form>
 </div>

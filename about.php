@@ -2,10 +2,10 @@
  require_once 'header.php';
 ?>
 
-  <header class="about-header">
-    <h1>About Us</h1>
-  </header>
   <main class="about">
+    <header class="about-header">
+      <h1>About Us</h1>
+    </header>
     <img class="aboutimg" src="https://picsum.photos/500/500" alt="Company Logo">
     <h2>Our Story</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod urna in lorem faucibus aliquet. Fusce id quam aliquet, rutrum sapien non, aliquam ipsum. Etiam laoreet ante quis nunc luctus ultrices. Suspendisse potenti. In venenatis tellus ac mauris aliquet interdum. Sed vel sapien mauris. Aliquam erat volutpat. Nam in quam euismod, pretium arcu sit amet, consequat nulla.</p>

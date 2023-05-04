@@ -5,7 +5,7 @@
 
   <div class="tabs">
     <button class="tablinks" onclick="openTab(event, 'Login')" id="defaultOpen">Login</button>
-    <button class="tablinks" onclick="openTab(event, 'Signup')">Signup</button>
+    <button class="tablinks2" onclick="openTab(event, 'Signup')">Signup</button>
   </div>
 
   <div id="Login" class="tabcontent">
@@ -17,7 +17,7 @@
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" required>
       <br>
-      <input type="submit" value="Submit" name="submit">
+      <input type="submit" value="Submit" name="submit" class="btn2">
     </form>
   </div>
 
@@ -36,7 +36,7 @@
       <label for="confirm_password">Confirm Password:</label>
       <input type="password" id="confirm_password" name="confirm_password" required>
       <br>
-      <input type="submit" value="Submit" name="submit">
+      <input type="submit" value="Submit" name="submit" class="btn2">
     </form>
   </div>
 
