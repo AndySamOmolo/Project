@@ -2,11 +2,16 @@
   require_once 'header.php';
  ?>
 
- <div class="banner"> </div>
+ <div class="banner">
+   <p>WELCOME </p>
+   <p>TO AMASDEN</p>
+   <p>BAKERY</p>
+  </div>
 
 
  <div class="container">
   <h1 class="tagline">Bestsellers in Our Bakery</h1>
+  
   <div class="items-container">
     <div class="item">
       <div class="image-container">
@@ -48,34 +53,33 @@
 
 
 <div class="container1">
- <h1 class="tagline">Hear what our satisfied customers have to say!</h1>
- <div class="items-container1">
-   <div class="item1">
-     <div class="image-container1">
-       <img src="https://picsum.photos/500/500" alt="Image 1">
-     </div>
-     <div class="description1">
-       <p>Description for Image 1</p>
-     </div>
-   </div>
-   <div class="item1">
-     <div class="image-container1">
-       <img src="https://picsum.photos/500/500" alt="Image 2">
-     </div>
-     <div class="description1">
-       <p>Description for Image 2</p>
-     </div>
-   </div>
-   <div class="item1">
-     <div class="image-container1">
-       <img src="https://picsum.photos/500/500" alt="Image 3">
-     </div>
-     <div class="description1">
-       <p>Description for Image 3</p>
-     </div>
-   </div>
- </div>
-
+  <h1 class="tagline">Hear what our satisfied customers have to say!</h1>
+  <div class="items-container1">
+    <div class="item1">
+      <div class="image-container1">
+        <img src="https://picsum.photos/500/500" alt="Image 1">
+      </div>
+      <div class="description1">
+        <p>Description for Image 1</p>
+      </div>
+    </div>
+    <div class="item1">
+      <div class="image-container1">
+        <img src="https://picsum.photos/500/500" alt="Image 2">
+      </div>
+      <div class="description1">
+        <p>Description for Image 2</p>
+      </div>
+    </div>
+    <div class="item1">
+      <div class="image-container1">
+        <img src="https://picsum.photos/500/500" alt="Image 3">
+      </div>
+      <div class="description1">
+        <p>Description for Image 3</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 
@@ -93,7 +97,9 @@
 </div>
 
 
+<script type="text/javascript">
 
+</script>
 
 
 <?php

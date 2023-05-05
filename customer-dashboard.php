@@ -1,359 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Bakery Customer Dashboard</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<style>
-		/* Define your CSS styles here */
-  body {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    margin: 0;
-    padding: 0;
-  }
+<?php
+ require_once 'header.php';
+?>
 
-  h1, h2, h3, h4, h5, h6 {
-    font-weight: bold;
-    margin-bottom: 16px;
-  }
-
-  a {
-    color: #007bff;
-    text-decoration: none;
-  }
-
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  main {
-    position: relative; /* Set the position of the sections relative to the main element */
-    min-height: 100vh; /* Set a minimum height equal to the viewport height */
-    margin-left: 250px; /* Add a margin to the left to prevent the sections from overlapping the aside menu */
-  }
-
-  aside {
-    position: fixed; /* Fix the position of the aside menu */
-    top: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #f9f9f9;
-    border-right: 1px solid #ccc;
-    padding: 16px;
-    width: 200px;
-  }
-
-  section {
-    position: absolute; /* Position the sections relative to the main element */
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 16px;
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.5s; /* Add a transition to smoothly animate the section */
-  }
-
-  section.active {
-    visibility: visible;
-    opacity: 1;
-  }
-
-  /* Aside menu styles */
-  aside ul {
-    margin-bottom: 16px;
-  }
-
-  aside li {
-    margin-bottom: 8px;
-  }
-
-  aside a {
-    display: block;
-    padding: 8px;
-  }
-
-  aside a:hover {
-    background-color: #007bff;
-    color: #fff;
-  }
-
-  /* Section styles */
-  h2 {
-    font-size: 24px;
-  }
-
-  table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-
-  table th, table td {
-    border: 1px solid #ccc;
-    padding: 8px;
-    text-align: left;
-  }
-
-  table th {
-    background-color: #f9f9f9;
-  }
-
-  form label {
-    display: block;
-    margin-bottom: 8px;
-  }
-
-  form input, form textarea, form select {
-    font-size: 16px;
-    padding: 8px;
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 16px;
-  }
-
-  form input[type="submit"] {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 8px 16px;
-    cursor: pointer;
-  }
-
-  form input[type="submit"]:hover {
-    background-color: #0062cc;
-  }
-
-  section#summary {
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  padding: 32px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-section#summary h2 {
-  font-size: 32px;
-  margin-bottom: 16px;
-}
-
-section#summary p {
-  font-size: 18px;
-  margin-bottom: 24px;
-}
-
-section#summary ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-section#summary li {
-  font-size: 16px;
-  margin-bottom: 8px;
-}
-
-section#summary li:first-of-type {
-  font-weight: bold;
-}
-
-section#summary li:last-of-type {
-  margin-bottom: 0;
-}
-
-section#summary li:before {
-  content: "• ";
-  color: #007bff;
-  font-weight: bold;
-}
-
-section#favorites {
-    padding: 32px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  section#favorites h2 {
-    font-size: 32px;
-    margin-bottom: 16px;
-  }
-
-  section#favorites p {
-    font-size: 18px;
-    margin-bottom: 24px;
-  }
-
-  section#favorites ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  section#favorites li {
-    width: calc(50% - 16px);
-    margin-bottom: 32px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 16px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
-  }
-
-  section#favorites li:hover {
-    transform: translateY(-4px);
-  }
-
-  section#favorites li img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 16px;
-  }
-
-  section#favorites li h3 {
-    font-size: 24px;
-    margin-bottom: 8px;
-  }
-
-  section#favorites li p {
-    font-size: 16px;
-    margin-bottom: 0;
-  }
-
-  section#specials {
-    padding: 32px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  section#specials h2 {
-    font-size: 32px;
-    margin-bottom: 16px;
-  }
-
-  section#specials p {
-    font-size: 18px;
-    margin-bottom: 24px;
-  }
-
-  section#specials ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  section#specials li {
-    width: calc(33.33% - 16px);
-    margin-bottom: 32px;
-    border-radius: 8px;
-    padding: 16px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
-    overflow: hidden;
-  }
-
-  section#specials li:hover {
-    transform: translateY(-4px);
-  }
-
-  section#specials li img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 16px;
-  }
-
-  section#specials li .details {
-    margin-top: auto;
-    text-align: center;
-  }
-
-  section#specials li h3 {
-    font-size: 24px;
-    margin-bottom: 8px;
-  }
-
-  section#specials li p {
-    font-size: 16px;
-    margin-bottom: 16px;
-  }
-
-  section#specials li .price {
-    display: inline-block;
-    background-color: #007bff;
-    color: #fff;
-    font-size: 20px;
-    padding: 8px 16px;
-    border-radius: 8px;
-  }
-
-  section#track-order {
-    padding: 32px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  section#track-order h2 {
-    font-size: 32px;
-    margin-bottom: 16px;
-  }
-
-  section#track-order form {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 24px;
-  }
-
-  section#track-order label {
-    font-size: 18px;
-    margin-right: 8px;
-    margin-bottom: 8px;
-  }
-
-  section#track-order input {
-    font-size: 18px;
-    padding: 8px;
-    margin-bottom: 16px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    flex: 1 1 100%;
-  }
-
-  section#track-order button {
-    background-color: #007bff;
-    color: #fff;
-    font-size: 20px;
-    padding: 8px 16px;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-  }
-
-  section#track-order button:hover {
-    background-color: #0062cc;
-  }
-
-  section#track-order #order-status {
-    font-size: 18px;
-  }
-	</style>
-</head>
-<body>
-
-
-	<main>
+	<main class="customer">
     <header>
   		<h1>Bakery Customer Dashboard</h1>
   	</header>
@@ -477,7 +126,7 @@ section#favorites {
 					<option value="paypal">PayPal</option>
 				</select>
 
-				<input type="submit" value="Save Changes">
+				<input type="submit" value="Save Changes" class="btn2">
 			</form>
 		</section>
 
@@ -530,7 +179,7 @@ section#favorites {
 				<label for="feedback">Feedback:</label>
 				<textarea id="feedback" name="feedback"></textarea>
 
-				<input type="submit" value="Submit Feedback">
+				<input type="submit" value="Submit Feedback" class="btn2">
 			</form>
 		</section>
 
@@ -576,9 +225,9 @@ section#favorites {
 		});
 
     const form = document.querySelector('section#track-order form');
- const orderStatus = document.querySelector('#order-status');
+ 		const orderStatus = document.querySelector('#order-status');
 
- form.addEventListener('submit', function(event) {
+ 	 form.addEventListener('submit', function(event) {
    event.preventDefault();
 
    const orderNumber = form.elements['order-number'].value;
@@ -592,5 +241,7 @@ section#favorites {
    orderStatus.textContent = `Your order with order number ${orderNumber} and email address ${email} is ${status}.`;
  });
 	</script>
-</body>
-</html>
+
+	<?php
+   require_once 'footer.php';
+  ?>

@@ -30,10 +30,12 @@ if (isset($_POST['submit'])) {
         } else {
             // incorrect password, show error message
             echo "Incorrect password.";
+
         }
     } else {
         // user not found, show error message
         echo "Incorrect email or password.";
+  
     }
 }
 ?>
