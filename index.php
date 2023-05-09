@@ -2,6 +2,26 @@
   require_once 'header.php';
  ?>
 
+ <?php
+   // Check if message parameter is present
+   if (isset($_GET['message'])) {
+       // Decode and store the message in a variable
+       $message = urldecode($_GET['message']);
+   }
+
+   // Display the message if it's not empty
+   if (!empty($message)) {
+       echo '<div style="background-color: #DFF2BF; border: 1px solid #4F8A10; color: #4F8A10; padding: 10px;">' . $message . '</div>';
+
+       // Add JavaScript to hide the message after 5 seconds
+       echo '<script>
+                 setTimeout(function() {
+                     document.querySelector("div[style=\"background-color: #DFF2BF; border: 1px solid #4F8A10; color: #4F8A10; padding: 10px;\"]").style.display = "none";
+                 }, 5000);
+             </script>';
+   }
+   ?>
+
  <div class="banner">
    <p>WELCOME </p>
    <p>TO AMASDEN</p>
@@ -11,7 +31,7 @@
 
  <div class="container">
   <h1 class="tagline">Bestsellers in Our Bakery</h1>
-  
+
   <div class="items-container">
     <div class="item">
       <div class="image-container">

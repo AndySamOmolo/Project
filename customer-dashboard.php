@@ -207,7 +207,6 @@
 	</main>
 
 	<script>
-		// Define your JavaScript functions here
 		const sections = document.querySelectorAll("section");
 		const links = document.querySelectorAll("aside a");
 

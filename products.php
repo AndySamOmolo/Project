@@ -24,7 +24,7 @@
         <p>Description for Image 1</p>
       </div>
       <div class="btnopt">
-        <button class="btn1" type="button" name="button">Select Options</button>
+        <button class="btn1" type="button" name="button" onclick="selectOptions(this)">Select Options</button>
       </div>
     </div>
     <div class="item">
@@ -35,7 +35,7 @@
         <p>Description for Image 2</p>
       </div>
       <div class="btnopt">
-        <button class="btn1" type="button" name="button">Select Options</button>
+        <button class="btn1" type="button" name="button" onclick="selectOptions(this)">Select Options</button>
       </div>
     </div>
     <div class="item">
@@ -46,12 +46,30 @@
         <p>Description for Image 3</p>
       </div>
       <div class="btnopt">
-        <button class="btn1" type="button" name="button">Select Options</button>
+        <button class="btn1" type="button" name="button" onclick="selectOptions(this)">Select Options</button>
       </div>
     </div>
   </div>
 
 </div>
+
+<script>
+  function selectOptions(button) {
+    // Get the parent item div
+    var item = button.closest('.item');
+
+    // Get the product name and image
+    var name = item.querySelector('.description p').textContent;
+    var imageSrc = item.querySelector('.image-container img').src;
+
+    // Store the product name and image in local storage
+    localStorage.setItem('productName', name);
+    localStorage.setItem('productImage', imageSrc);
+
+    // Redirect to the options page
+    window.location.href = 'cake-template.php';
+  }
+</script>
 
 
 <?php
