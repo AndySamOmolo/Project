@@ -1,80 +1,56 @@
 <?php
-// Set database credentials
-$host = "localhost";
-$username = "root";
-$password = "";
-$dbname = "bakery";
+// Include the database connection file
+require_once 'db.php';
 
-// Connect to the database
-$conn = mysqli_connect($host, $username, $password, $dbname);
+// Check if the form was submitted
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  // Get the form data
+  $name = $_POST['name'];
+  $description = $_POST['description'];
+  $price = $_POST['price'];
 
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+  // Get the image data
+  $image = $_FILES['image'];
+  $image_name = $image['name'];
+  $image_tmp_name = $image['tmp_name'];
+  $image_size = $image['size'];
+  $image_type = $image['type'];
 
-// Escape user inputs for security
-$item_name = mysqli_real_escape_string($conn, $_POST['item-name']);
-$item_description = mysqli_real_escape_string($conn, $_POST['item-description']);
-$item_size = mysqli_real_escape_string($conn, $_POST['item-size']);
-$item_topping = mysqli_real_escape_string($conn, $_POST['item-topping']);
-$item_type = mysqli_real_escape_string($conn, $_POST['item-type']);
-$item_other_details = mysqli_real_escape_string($conn, $_POST['item-other-details']);
+  // Create the uploads folder if it doesn't exist
+  if (!file_exists('uploads')) {
+    mkdir('uploads');
+  }
 
-// Initialize the message variable
-$message = '';
+  // Check if the image was uploaded successfully
+  if ($image_size > 0 && $image_size <= 5000000) {
+    if ($image_type === 'image/jpeg' || $image_type === 'image/png') {
+      // Move the uploaded image to a permanent location
+      $image_path = 'uploads/' . $image_name;
+      move_uploaded_file($image_tmp_name, $image_path);
 
-// Check if image file was uploaded
-if (isset($_FILES['item-image']) && $_FILES['item-image']['error'] === UPLOAD_ERR_OK) {
-    // Create the uploads directory if it doesn't exist
-    if (!file_exists('uploads')) {
-        mkdir('uploads');
-    }
+      // Prepare the SQL statement
+      $stmt = $pdo->prepare("INSERT INTO products (name, description, price, image) VALUES (?, ?, ?, ?)");
 
-    // Get image details
-    $image_name = $_FILES['item-image']['name'];
-    $image_type = $_FILES['item-image']['type'];
-    $image_size = $_FILES['item-image']['size'];
-    $image_tmp_name = $_FILES['item-image']['tmp_name'];
+      // Bind the parameters
+      $stmt->bindParam(1, $name);
+      $stmt->bindParam(2, $description);
+      $stmt->bindParam(3, $price);
+      $stmt->bindParam(4, $image_path);
 
-    // Generate a unique filename for the image
-    $image_extension = pathinfo($image_name, PATHINFO_EXTENSION);
-    $image_filename = uniqid() . '.' . $image_extension;
-
-    // Move the uploaded image to the uploads directory
-    $image_path = 'uploads/' . $image_filename;
-    if (move_uploaded_file($image_tmp_name, $image_path)) {
-        // Insert data into the database
-        $sql = "INSERT INTO bakery_items (item_name, item_image, item_description, item_size, item_topping, item_type, item_other_details)
-                VALUES ('$item_name', '$image_filename', '$item_description', '$item_size', '$item_topping', '$item_type', '$item_other_details')";
-        if (mysqli_query($conn, $sql)) {
-            // Set success message
-            $message = 'New bakery item added successfully!';
-        } else {
-            // Set error message
-            $message = 'Error creating bakery item: ' . mysqli_error($conn);
-        }
+      // Execute the query
+      if ($stmt->execute()) {
+        // Redirect to the product list page
+        header('Location: products.php');
+        exit();
+      } else {
+        // Handle the error
+        echo "<p style='color:red;'>Error: " . $stmt->errorInfo()[2] . "</p>";
+      }
     } else {
-        // Set error message
-        $message = 'Error uploading image: ' . $_FILES['item-image']['error'];
+      echo "<p style='color:red;'>Error: Invalid image type. Only JPEG and PNG images are allowed.</p>";
     }
-} else {
-    // Insert data into the database without an image
-    $sql = "INSERT INTO bakery_items (item_name, item_description, item_size, item_topping, item_type, item_other_details)
-            VALUES ('$item_name', '', '$item_description', '$item_size', '$item_topping', '$item_type', '$item_other_details')";
-    if (mysqli_query($conn, $sql)) {
-        // Set success message
-        $message = 'New bakery item added successfully!';
-    } else {
-        // Set error message
-        $message = 'Error creating bakery item: ' . mysqli_error($conn);
-    }
+  } else {
+    echo "<p style='color:red;'>Error: Invalid image size. The maximum file size is 5 MB.</p>";
+  }
 }
-
-// Redirect back to the same page with message parameter
-header("Location: {$_SERVER['HTTP_REFERER']}?message=" . urlencode($message));
-exit;
-
-// Close database connection
-mysqli_close($conn);
 ?>

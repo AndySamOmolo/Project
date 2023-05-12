@@ -49,6 +49,7 @@ aside {
 	flex: 0 0 200px;
 	height: 100%;
 	padding: 20px;
+  width: 25%;
 	border-right: solid 1px purple;
 }
 
@@ -108,6 +109,7 @@ nav a span {
 section.dashboard-section {
 	display: none;
 	flex: 1 1 calc(33.33% - 40px);
+
 	margin: 20px;
 	padding: 20px;
 	background-color: #fff;
@@ -117,6 +119,137 @@ section.dashboard-section {
 section.dashboard-section p {
 	margin-bottom: 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#product-management {
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#product-management .product-section {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+#product-management .product-section h3 {
+  color: #333;
+  font-size: 20px;
+  margin-top: 0;
+}
+
+#product-management .product-actions {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+#product-management .product-actions h3 {
+  color: #333;
+  font-size: 20px;
+  margin-top: 0;
+}
+
+#product-management .product-actions ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#product-management .product-actions li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#product-management .product-actions li:last-child {
+  margin-right: 0;
+}
+
+#product-management .product-actions a {
+  background-color: purple;
+  color: seashell;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color ease-in-out 0.3s, color ease-in-out 0.3s;
+}
+
+#product-management .product-actions a:hover {
+  background-color: seashell;
+  color: purple;
+  border: solid 1px purple;
+}
+
+#product-management .product-list {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#product-management .product-list h3 {
+  color: #333;
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+#product-management .product-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#product-management .product-list th,
+#product-management .product-list td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+#product-management .product-list th {
+  background-color: #eee;
+}
+
+#product-management .product-list td:last-child {
+  text-align: center;
+}
+
+#product-management .product-list td a {
+  color: #333;
+  text-decoration: none;
+}
+
+#product-management .product-list td a:hover {
+  text-decoration: underline;
+}
+
+
+
 
 
 
@@ -253,65 +386,7 @@ section.dashboard-section p {
 	text-decoration: underline;
 }
 
-.inventory-section {
-    margin-top: 30px;
-    background-color: #f4f4f4;
-    border: 1px solid #ddd;
-    padding: 20px;
-  }
 
-  /* Style for the inventory title */
-  .inventory-title {
-    font-size: 24px;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-
-  /* Style for the inventory container */
-  .inventory-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  /* Style for the inventory item */
-  .inventory-item {
-    width: calc(33.33% - 20px);
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 10px;
-  }
-
-  /* Style for the inventory icon */
-  .inventory-icon {
-    margin-right: 10px;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background-color: #f00;
-  }
-
-  /* Style for the inventory label */
-  .inventory-label {
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #333;
-  }
-
-  /* Style for the inventory value */
-  .inventory-value {
-    font-size: 14px;
-    color: #666;
-  }
-  
 
 
 
@@ -578,41 +653,64 @@ section.dashboard-section p {
 }
 
 #employee-management .add-employee {
-	background-color: #f9f9f9;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	padding: 10px;
-	margin-bottom: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 #employee-management .add-employee h3 {
-	color: #333;
-	font-size: 20px;
-	margin-top: 0;
-	margin-bottom: 10px;
+  color: #333;
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 #employee-management .add-employee form {
-	display: flex;
-	flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #employee-management .add-employee label {
-	display: block;
-	font-size: 16px;
-	margin-bottom: 5px;
+  font-size: 16px;
+  margin-bottom: 5px;
+  width: 100%;
 }
 
 #employee-management .add-employee input,
 #employee-management .add-employee select {
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	font-size: 16px;
-	padding: 5px 10px;
-	margin-bottom: 10px;
-	flex: 1 1 auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 20px;
+  flex: 1 1 auto;
 }
 
+#employee-management .add-employee select {
+  width: 100%;
+}
+
+#employee-management .add-employee button[type="submit"] {
+  background-color: purple;
+  border: 1px solid purple;
+  border-radius: 5px;
+  color: seashell;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  padding: 10px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  width: 100%;
+}
+
+#employee-management .add-employee button[type="submit"]:hover {
+  background-color: seashell;
+  border: 1px solid purple;
+  color: purple;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
 
 
 #employee-management .employee-list {
@@ -975,3 +1073,121 @@ section.dashboard-section p {
   font-size: 14px;
   color: #999;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.add-products {
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 200px;
+  margin-top: 20px;
+  padding: 30px;
+  padding-right: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-products input[type='file'] {
+width: 100%;
+padding: 10px;
+margin-bottom: 10px;
+border: 1px grey solid;
+border-radius: 4px;
+background-color: #f5f5f5;
+transition: background-color ease-in-out 0.9s;
+}
+
+.add-products input,
+.add-products textarea {
+width: 100%;
+padding: 10px;
+margin-bottom: 10px;
+border: 1px grey solid;
+border-radius: 4px;
+background-color: #f5f5f5;
+transition: background-color ease-in-out 0.9s;
+}
+
+.add-products input:focus,
+.add-products textarea:focus {
+  background-color: white;
+  }
+
+  .add-products button[type="submit"] {
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid purple;
+  background-color: purple;
+  color: seashell;
+  transition: background-color ease-in-out 0.3s;
+  padding: 10px;
+  }
+
+  .add-products button[type="submit"]:hover {
+  border: 1px solid purple;
+  background-color: seashell;
+  color: purple;
+  }
+
+
+  .btn-container {
+  text-align: center;
+  }
+
+  .file-upload {
+    background-color: purple;
+    color: purple;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color ease-in-out 0.3s, color ease-in-out 0.3s;
+    cursor: pointer;
+  }
+
+  .file-upload:hover {
+    background-color: seashell;
+    color: purple;
+    border: solid 1px purple;
+  }
+
+  .file-upload input[type="file"] {
+    position: fixed;
+    left: -9999px;
+  }
+
+  .file-upload::file-selector-button {
+    border: 1px solid purple;
+    background-color: purple;
+    color: seashell;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color ease-in-out 0.3s, color ease-in-out 0.3s;
+    cursor: pointer;
+  }
+
+  .file-upload:hover::file-selector-button {
+    background-color: seashell;
+    color: purple;
+    border: solid 1px purple;
+  }

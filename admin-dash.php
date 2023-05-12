@@ -1,88 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Bakery Admin Dashboard</title>
-	<link rel="stylesheet" type="text/css" href="admin.css">
-</head>
-<body>
-	<header>
-		<a href="index.php">
-    <img src="logo.png" alt="Logo">
-		</a>
-		<h1>Bakery Admin Dashboard</h1>
-	</header>
-	<main>
-		<aside>
-			<nav>
-				<ul>
-					<li>
-						<a href="#" data-section="sales-data" class="admin-nav">
-							<svg viewBox="0 0 24 24">
-								<path d="M20,16V6H4v10H20M20,4a2,2 0 0,1 2,2v10a2,2 0 0,1 -2,2H4a2,2 0 0,1 -2,-2V6a2,2 0 0,1 2,-2H20Z"></path>
-							</svg>
-							<span>Sales Data</span>
-						</a>
-					</li>
-					<li>
-						<a href="#" data-section="inventory-management" class="admin-nav">
-							<svg viewBox="0 0 24 24">
-								<path d="M19,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M17,9V7H13V9H17M17,13V11H13V13H17M17,17V15H13V17H17Z"></path>
-							</svg>
-							<span>Inventory Management</span>
-						</a>
-					</li>
-					<li>
-						<a href="#" data-section="order-management" class="admin-nav">
-							<svg viewBox="0 0 24 24">
-								<path d="M19,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M17,7H7V5H17V7M17,11H7V9H17V11M17,19H7V15H17V19Z"></path>
-							</svg>
-							<span>Order Management</span>
-						</a>
-					</li>
-					<li>
-						<a href="#" data-section="marketing-analytics" class="admin-nav">
-							<svg viewBox="0 0 24 24">
-								<path d="M13,12V3.27A1,1 0 0,0 12,2.27A1,1 0 0,0 11,3.27V12H6.5L12,17.5L17.5,12H13Z"></path>
-							</svg>
-							<span>Marketing Analytics</span>
-						</a>
-					</li>
-					<li>
-						<a href="#" data-section="employee-management" class="admin-nav">
-							<svg viewBox="0 0 24 24">
-								<path d="M4,4V20H20V4H4M18,8H6V6H18V8M18,12H6V10H18V12M18,16H6V14H18V16Z"></path>
-							</svg>
-							<span>Employee Management</span>
-						</a>
-					</li>
-					<li>
-						<a href="#" data-section="customer-management" class="admin-nav">
-							<svg viewBox="0 0 24 24">
-								<path d="M19,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M17,7H7V5H17V7M17,11H7V9H17V11M17,15H7V13H17V15Z"></path>
-							</svg>
-							<span>Customer Management</span>
-						</a>
-					</li>
-					<li>
-						<a href="#" data-section="reporting" class="admin-nav">
-							<svg viewBox="0 0 24 24">
-								<path d="M19,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M17,9V7H13V9H17M17,13V11H13V13H17M17,17V15H13V17H17Z"></path>
-							</svg>
-							<span>Reporting</span>
-						</a>
-					</li>
-					<li>
-						<a href="#" data-section="alerts-and-notifications" class="admin-nav">
-							<svg viewBox="0 0 24 24">
-								<path d="M12,20A2,2 0 0,1 10,18H14A2,2 0 0,1 12,20M19,10V18H5V10L12,15L19,10Z"></path>
-							</svg>
-							<span>Alerts and Notifications</span>
-						</a>
-					</li>
-				</ul>
-			</nav>
-		</aside>
-    <section id="sales-data" class="dashboard-section" style="display: block;">
+<?php
+	require_once 'admin-header.php';
+ ?>
+
+
+    <section id="sales-data" class="dashboard-section">
 			<h2>Sales</h2>
 			<div class="sales-section">
 			<div class="sales-summary">
@@ -105,39 +26,65 @@
 			</div>
     </section>
 
+
+		<section id="product-management" class="dashboard-section">
+		  <h2>Product Management</h2>
+		  <div class="product-section">
+		    <div class="product-actions">
+		      <h3>Actions</h3>
+		      <ul>
+		        <li><a href="#">Add New Product</a></li>
+		        <li><a href="#">Edit Product</a></li>
+		        <li><a href="#">Delete Product</a></li>
+		      </ul>
+		    </div>
+		    <div class="product-list">
+		      <h3>Product List</h3>
+		      <table>
+		        <thead>
+		          <tr>
+		            <th>Product Name</th>
+		            <th>Price</th>
+		            <th>Quantity</th>
+		            <th>Actions</th>
+		          </tr>
+		        </thead>
+		        <tbody>
+		          <tr>
+		            <td>Chocolate Cake</td>
+		            <td>$20</td>
+		            <td>10</td>
+		            <td>
+		              <a href="#">Edit</a>
+		              <a href="#">Delete</a>
+		            </td>
+		          </tr>
+		          <tr>
+		            <td>Blueberry Muffin</td>
+		            <td>$3</td>
+		            <td>25</td>
+		            <td>
+		              <a href="#">Edit</a>
+		              <a href="#">Delete</a>
+		            </td>
+		          </tr>
+		          <tr>
+		            <td>Croissant</td>
+		            <td>$5</td>
+		            <td>15</td>
+		            <td>
+		              <a href="#">Edit</a>
+		              <a href="#">Delete</a>
+		            </td>
+		          </tr>
+		        </tbody>
+		      </table>
+		    </div>
+		  </div>
+		</section>
+
       <section id="inventory-management" class="dashboard-section">
     	<h2>Inventory Management</h2>
-			<div class="inventory-section">
-				<div class="inventory-container">
-					<div class="inventory-item">
-						<div class="inventory-icon">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f00" width="24px" height="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 9h-1V6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v3H5c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1h14c.55 0 1-.45 1-1v-9c0-.55-.45-1-1-1zm-9-3h4v3h-4V6zM7 6h6v3H7V6zm12 12H5v-7h14v7z"/></svg>
-						</div>
-						<div class="inventory-details">
-							<p class="inventory-label">Flour</p>
-							<p class="inventory-value">250 lbs</p>
-						</div>
-					</div>
-					<div class="inventory-item">
-						<div class="inventory-icon">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f00" width="24px" height="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 9h-1V6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v3H5c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1h14c.55 0 1-.45 1-1v-9c0-.55-.45-1-1-1zm-9-3h4v3h-4V6zM7 6h6v3H7V6zm12 12H5v-7h14v7z"/></svg>
-						</div>
-						<div class="inventory-details">
-							<p class="inventory-label">Sugar</p>
-							<p class="inventory-value">150 lbs</p>
-						</div>
-					</div>
-					<div class="inventory-item">
-						<div class="inventory-icon">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f00" width="24px" height="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 9h-1V6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v3H5c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1h14c.55 0 1-.45 1-1v-9c0-.55-.45-1-1-1zm-9-3h4v3h-4V6zM7 6h6v3H7V6zm12 12H5v-7h14v7z"/></svg>
-						</div>
-						<div class="inventory-details">
-							<p class="inventory-label">Eggs</p>
-							<p class="inventory-value">300 pcs</p>
-						</div>
-					</div>
-				</div>
-				</div>
     	<div class="inventory-summary">
     		<h3>Inventory Summary</h3>
     		<ul>
@@ -311,59 +258,88 @@
 
 
     <section id="employee-management" class="dashboard-section">
+			<?php
+			// Check if a message is set in the URL query string
+			if (isset($_GET['message'])) {
+			    $message = $_GET['message'];
+			    // Display the message in a styled div and set a timeout to hide it after 5 seconds
+			    echo "<div style='background-color: #F0FFF0; color: #008000; border: 1px solid #008000; padding: 10px; margin-bottom: 20px;'>$message</div>";
+			    echo "<script>window.onload = function() { setTimeout(function() { document.querySelector('div').style.display = 'none'; }, 5000); }</script>";
+			}
+			?>
 			<h2>Employee Management</h2>
 			<div class="add-employee">
 				<h3>Add Employee</h3>
-				<form>
+				<form action="add-employee.php" method="POST">
 					<label for="employee-name">Name:</label>
 					<input type="text" id="employee-name" name="employee-name" required>
 
 					<label for="employee-email">Email:</label>
 					<input type="email" id="employee-email" name="employee-email" required>
 
+					<label for="employee-password">Password:</label>
+					<input type="password" id="employee-password" name="employee-password" required>
+
 					<label for="employee-role">Role:</label>
 					<select id="employee-role" name="employee-role">
 						<option value="sales">Sales</option>
 						<option value="marketing">Marketing</option>
-						<option value="engineering">Engineering</option>
+						<option value="baking">Baking</option>
 					</select>
 
 					<button type="submit" class="btn1">Add Employee</button>
 				</form>
 			</div>
-			<div class="employee-list">
-				<h3>Employee List</h3>
-				<table>
-					<thead>
-						<tr>
-							<th>Name</th>
-							<th>Email</th>
-							<th>Role</th>
-							<th>Actions</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>John Doe</td>
-							<td>johndoe@example.com</td>
-							<td>Engineering</td>
-							<td><button class="edit btn1">Edit</button><button class="delete btn1">Delete</button></td>
-						</tr>
-						<tr>
-							<td>Jane Smith</td>
-							<td>janesmith@example.com</td>
-							<td>Sales</td>
-							<td><button class="edit btn1">Edit</button><button class="delete btn1">Delete</button></td>
-						</tr>
-						<tr>
-							<td>Bob Johnson</td>
-							<td>bjohnson@example.com</td>
-							<td>Marketing</td>
-							<td><button class="edit">Edit</button><button class="delete">Delete</button></td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
+			<?php
+	// Include the database connection file
+	include('db.php');
+
+	// Query the database to retrieve the employee data
+	$sql = "SELECT id, name, email, job_title FROM employees";
+	$result = mysqli_query($db, $sql);
+	?>
+
+	<div class="employee-list">
+	    <h3>Employee List</h3>
+	    <?php
+	    // Check for success or error messages in the URL query string
+	    if (isset($_GET['message'])) {
+	        $message = $_GET['message'];
+	        echo "<p class='message'>$message</p>";
+	    }
+	    ?>
+	    <table>
+	        <thead>
+	            <tr>
+	                <th>Name</th>
+	                <th>Email</th>
+	                <th>Job Title</th>
+	                <th>Actions</th>
+	            </tr>
+	        </thead>
+	        <tbody>
+	            <?php
+	            // Loop through the query result and generate the table rows dynamically
+	            while ($row = mysqli_fetch_assoc($result)) {
+	                echo "<tr>";
+	                echo "<td>" . $row["name"] . "</td>";
+	                echo "<td>" . $row["email"] . "</td>";
+	                echo "<td>" . $row["job_title"] . "</td>";
+	                echo '<td>';
+	                echo '<a href="edit_employee.php?id=' . $row["id"] . '" class="edit btn1">Edit</a>';
+	                echo '<a href="delete_employee.php?id=' . $row["id"] . '" class="delete btn1" onclick="return confirm(\'Are you sure you want to delete this employee?\')">Delete</a>';
+	                echo '</td>';
+	                echo "</tr>";
+	            }
+	            ?>
+	        </tbody>
+	    </table>
+	</div>
+
+	<?php
+	// Close the database connection
+	mysqli_close($db);
+	?>
 		</section>
 
 
@@ -533,6 +509,7 @@
 			</div>
 		</section>
 	</main>
-	<script src="admin.js"></script>
-</body>
-</html>
+
+<?php
+	require_once 'admin-footer.php';
+ ?>

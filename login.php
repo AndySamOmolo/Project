@@ -41,7 +41,7 @@ if (isset($_POST['submit'])) {
                 if ($user['email'] == 'admin@example.com') {
                     // admin user, redirect to admin dashboard
                     $_SESSION['user_id'] = $user['id'];
-                    header('Location: admin-dashboard.php');
+                    header('Location: admin-dash.php');
                     exit();
                 } else {
                     // regular user, redirect to customer dashboard
